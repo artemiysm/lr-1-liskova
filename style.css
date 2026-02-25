@@ -1,0 +1,310 @@
+/* style.css — мобильный дизайн 390x844px */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Контейнер под мобильное разрешение */
+.mobile-container {
+    width: 100%;
+    max-width: 390px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #fff;
+    padding: 16px;
+}
+
+/* === ЦВЕТОВЫЕ АКЦЕНТЫ ПО РАЗДЕЛАМ (по ТЗ) === */
+
+/* Авторизация/Регистрация — синий акцент */
+.auth-page {
+    border-top: 4px solid #2c3e50;
+}
+.auth-page .btn-primary {
+    background: #2c3e50;
+    border: none;
+}
+
+/* Страница создания заявки — зелёный акцент */
+.form-page {
+    border-top: 4px solid #27ae60;
+}
+.form-page .btn-primary {
+    background: #27ae60;
+    border: none;
+}
+
+/* Дашборд пользователя — бирюзовый акцент */
+.dashboard-page {
+    border-top: 4px solid #16a085;
+}
+
+/* Админ-панель — красный акцент */
+.admin-page {
+    border-top: 4px solid #c0392b;
+}
+.admin-page .page-header {
+    background: #fff5f5;
+}
+
+/* === ОБЩИЕ ЭЛЕМЕНТЫ === */
+
+/* Шапка страницы */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.page-header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.btn-logout,
+.btn-back {
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: none;
+}
+.btn-logout:hover,
+.btn-back:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Формы */
+.form-group {
+    margin-bottom: 14px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #555;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2c3e50;
+}
+
+/* Кнопки */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+.btn-primary {
+    background: #2c3e50;
+}
+.btn-success {
+    background: #27ae60;
+}
+.btn-large {
+    padding: 14px;
+}
+
+/* Сообщения об ошибках/успехе */
+.alert {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.alert-error {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+.alert-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+/* Ссылки в авторизации */
+.auth-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+.auth-link a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* Карточка заявки */
+.request-card {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.request-date {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+.request-body p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+.cancel-reason {
+    color: #c0392b;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+/* Статусы заявок */
+.status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+}
+.status-new {
+    background: #3498db;
+}
+.status-progress {
+    background: #f39c12;
+}
+.status-done {
+    background: #27ae60;
+}
+.status-cancelled {
+    background: #c0392b;
+}
+
+/* Пустое состояние */
+.empty-state {
+    text-align: center;
+    color: #999;
+    padding: 30px 20px;
+    font-size: 0.95rem;
+}
+
+/* Кнопка новой заявки */
+.btn-new-request {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #27ae60;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.btn-new-request:hover {
+    opacity: 0.9;
+}
+
+/* Таблица в админ-панели */
+.admin-table-wrapper {
+    overflow-x: auto;
+}
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+.admin-table th,
+.admin-table td {
+    padding: 8px 6px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    vertical-align: middle;
+}
+.admin-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+    color: #555;
+}
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.status-select,
+.cancel-input {
+    padding: 6px;
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Ссылка "Назад" в формах */
+.form-back-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+.form-back-link a {
+    color: #666;
+    text-decoration: none;
+}
+.form-back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптив для экранов уже 390px */
+@media (max-width: 360px) {
+    .mobile-container {
+        padding: 12px;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    .admin-table {
+        font-size: 0.8rem;
+    }
+    .page-header h1 {
+        font-size: 1.1rem;
+    }
+}
